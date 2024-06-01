@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Space+Mono:300,400,600,700&amp;lang=en" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <div class="container">
+    <img src="logo.svg" alt="spliter-logo">
+    <div class="content-container">
+      <section class="bill">
+        <div class="bill-box">
+          <div class="msg-box">
+            <h4> Bill</h4>
+            <div class="warningmsg msg1"></div>
+          </div>
+          <div class="dollar-box">
+            <img src="icon-dollar.svg">
+            <input type="number"  id="bill" placeholder="0" class="form-input">
+          </div>
+        </div>
+        <div class="select-tips">
+          <h4> Select Tip %</h4>
+          <div class="perc-box">
+            <button type="submit" value="5" class="tips-perc"><span>5%</span></button>
+            <button type="submit" value="10" class="tips-perc"><span>10%</span></button>
+            <button type="submit" value="15" class="tips-perc"><span>15%</span></button>
+            <button type="submit" value="25" class="tips-perc"><span>25%</span></button>
+            <button type="submit" value="50" class="tips-perc"><span>50%</span></button>
+            <input type="number" id="customBtn" placeholder="Custom"></input>
+          </div>
+        </div>
+        <div class="people">
+          <div class="msg-box">
+            <h4>Number of People</h4>
+            <div class="warningmsg msg2"></div>
+          </div>
+         
+          <div class="people-box">
+            <img src="icon-person.svg" alt="icon-person">
+            <input type="number"  id="numPeople" placeholder="0" class="form-input"> 
+          </div>
+        </div>
+      </section>
+      <section class="showTips">
+        <div class="results">
+          <div class="tip-amount">
+            <p class="amount">  Tip Amount <span> / person</span></p>
+            <div id="displayResultTips">$0.00</div>
+          </div>
+          <div class="total-amount">
+            <p class="total">  Total <span> / person</span></p>
+            <div id="displayResultTotal">$0.00</div>
+          </div>
+        </div>
+        <button type="reset" id="reset">RESET</button>
+      </section>
+    </div>
+  </div>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+
+  <script src="script.js"></script>
+</body>
+</html>

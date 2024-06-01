@@ -1,0 +1,273 @@
+/* @import url('https://fonts.google.com/specimen/Space+Mono'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(185, 41%, 84%);
+    gap: 80px;
+}
+
+.content-container{
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: hsl(0, 0%, 100%);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h4{
+    margin-bottom: 10px;
+}
+
+.bill{
+    width: 340px;
+    height: auto;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.bill-box, .people{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.bill-box .dollar-box, .people .people-box{
+    position: relative;
+    display: flex;
+}
+
+.bill-box .dollar-box img,
+.people .people-box img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: hsl(180, 43%, 92%);
+    text-align: end;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Space Mono', sans-serif;
+}
+
+input:focus,#customBtn:focus{
+    border: 1px solid rgb(126, 248, 126);
+}
+
+.select-tips{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.perc-box{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.tips-perc{
+    width: 80px;
+    height: 40px;
+    padding:8px;
+    background: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.tips-perc span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.tips-perc:hover{
+    cursor: pointer;
+    background: hsl(172, 92%, 42%);
+    color: #000;
+}
+
+.tips-perc:active,
+button:active{
+    opacity: .3;
+    transition: all .1s ease;
+}
+#customBtn{
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    background: hsl(180, 43%, 92%);
+}
+
+#customBtn:hover{
+    cursor: pointer;
+}
+
+#customBtn::placeholder{
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/*========== Style for the Section 2 =============== */
+.showTips{
+    width: 340px;
+    height: 100%;
+    background: hsl(183, 100%, 15%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.showTips .results{
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.showTips .results .amount span,
+.showTips .results .total span{
+    display: block;
+    color: hsl(186, 14%, 53%);
+}
+
+.showTips .results .tip-amount,
+.showTips .results .total-amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.showTips .results #displayResultTips,
+.showTips .results #displayResultTotal{
+    width: auto;
+    height: 40px;
+    text-align: end;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 5px 10px;
+    color:hsl(172, 88%, 52%);
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: hsl(172, 92%, 42%);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+    background: hsl(185, 41%, 84%);
+}
+
+button.disabled {
+    background-color: hsl(183, 97%, 30%);
+    cursor: not-allowed;
+}
+
+.msg-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg-box .warningmsg{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: red;
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 750px) {
+    body{
+        width: 100%;
+        height: auto;
+        background: hsl(185, 41%, 84%);
+       
+    }
+    .container{
+        width: 100%;
+        height: auto;
+        margin: 50px auto 0px;
+        padding: 00px;
+
+    }
+    .content-container{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 30px 10px;
+
+    }
+    .bill{
+        width: 100%;
+        height: auto;
+        margin: 0px auto 50px;
+    }
+
+    .tips-perc{
+        width: 45%;
+        height: 40px;
+        padding:8px;
+    }
+
+    #customBtn{
+        width: 45%;
+        height: 40px;
+    }
+    #customBtn::placeholder{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .showTips{
+        width: 100%;
+        height: 320px;
+        padding: 15px;
+    }
+    .showTips .results #displayResultTips,
+    .showTips .results #displayResultTotal{
+        font-size: 1.3rem;
+}
+}
